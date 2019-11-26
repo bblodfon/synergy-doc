@@ -1,0 +1,7 @@
+# R Session Info {-}
+
+```{r session info, comment=""}
+xfun::session_info()
+```
+
+# References {-}

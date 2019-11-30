@@ -127,7 +127,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Synergy Papers Review</a></li>
+<li><a href="./">Synergy Notes</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Intro</a></li>
@@ -158,16 +158,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="dose-response-curves-single-drug" class="section level1 unnumbered">
 <h1>Dose-response curves (single drug)</h1>
 <p>Drugs are administered in specific doses, so the drug’s effect is measured per each dosage.
-After the experiments are done, you end up with measurements for each drug in the form: <span class="math inline">\((x,y)\)</span>, where <span class="math inline">\(x\)</span> is the dosage and <span class="math inline">\(y=E \in [E_min,E_max]\)</span> the measured effect/viability/response (depending on which definition you use).
-I can plot these points to get the <em>dose-response</em> or <em>dose-effect</em> curve.
-Usually we assume that these curves are <em>monotonous</em> (always increasing or decreasing) though that may not always be true.
+After the experiments are done, you end up with measurements for each drug in the form: <span class="math inline">\((x,y)\)</span>, where <span class="math inline">\(x\)</span> is the dosage and <span class="math inline">\(y=E \in [E_{min},E_{max}]\)</span> the measured effect/viability/response (depending on which definition you use).
+You can plot these points to get the <em>dose-response</em> or <em>dose-effect</em> curve.
+Usually we assume that these curves are <em>monotonous</em> (always increasing or decreasing) though that may not always be true.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>
 There exist mathematical formulas that describe them, the most prominent of which is the <strong>4-parameter log-logistic (4PL) model</strong> <span class="citation">(Yadav et al. <a href="references.html#ref-Yadav2015">2015</a>)</span>:</p>
-<p><span class="math display" id="eq:binom">\[\begin{equation} 
-  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+<p><span class="math display" id="eq:4pmll">\[\begin{equation} 
+  E = \frac{E_{min}+E_{max}\left(\frac{x}{m}\right)^\lambda}{1+\left(\frac{x}{m}\right)^\lambda}
   \tag{1}
 \end{equation}\]</span></p>
-<p>See equation <a href="dose-response-curves-single-drug.html#eq:binom">(1)</a></p>
+<p>Note that <span class="math inline">\(\lambda\)</span> is the <em>sigmoidicity</em> of the curve and <span class="math inline">\(m\)</span> is the dosage of the drug that produces half the maximum effect (also defined in various texts as <span class="math inline">\(EC_{50},IC_{50}\)</span>). For <span class="math inline">\(E_{min}=0\)</span>, this equation is called <em>Hill’s equation</em>.
+A kind of derivative equation from <a href="dose-response-curves-single-drug.html#eq:4pmll">(1)</a> was proposed by <span class="citation">(Chou and Talalay <a href="references.html#ref-Chou1984">1984</a>)</span> and it’s called the <strong>median effect equation</strong>:<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<p><span class="math display" id="eq:medeffeq">\[\begin{equation} 
+  \frac{f_a}{f_u} = \frac{y-E_{min}}{E_{max}-y}=\left(\frac{x}{m}\right)^\lambda
+  \tag{2}
+\end{equation}\]</span></p>
+<p>Where <span class="math inline">\(f_a+f_u=1\)</span>.
+The goal when plotting this function is to find a way to measure the <span class="math inline">\(m,\lambda\)</span> parameters.
+<span class="citation">(Chou and Talalay <a href="references.html#ref-Chou1984">1984</a>)</span> proposed to rewrite equation <a href="dose-response-curves-single-drug.html#eq:medeffeq">(2)</a> as (generating what they called the <em>medial effect plot</em>):</p>
+<p><span class="math display" id="eq:medeffplot">\[\begin{equation}
+  log\left(\frac{f_a}{1-f_a}\right)=\lambda\log x-\lambda\log m
+  \tag{3}
+\end{equation}\]</span></p>
+<p>Where we can easily compute the <span class="math inline">\(m,\lambda\)</span> parameters (one is the <em>slope</em>, the other can be found where the plot cuts the <span class="math inline">\(x\)</span>-axis: <span class="math inline">\(y=log\left(\frac{f_a}{1-f_a}\right)=0\)</span>).
+Using <a href="dose-response-curves-single-drug.html#eq:4pmll">(1)</a> while setting <span class="math inline">\(E_{max}=1,E_{min}=0\)</span> and as <span class="math inline">\(x\)</span> the <span class="math inline">\(x/m\)</span>, we can see how the sigmoidicity parameter <span class="math inline">\(\lambda\)</span> affects the shape of the curve:</p>
+<div class="figure" style="text-align: center"><span id="fig:HillsPlot"></span>
+<img src="index_files/figure-html/HillsPlot-1.png" alt="Hill's equation for different values of the slope parameter λ" width="576" />
+<p class="caption">
+Figure 1: Hill’s equation for different values of the slope parameter λ
+</p>
+</div>
+<p>Note that for <span class="math inline">\(\lambda=1\)</span> the shape is a <em>hyperbole</em>.</p>
+<p>Also, using equation <a href="dose-response-curves-single-drug.html#eq:medeffeq">(2)</a>, we can compute any dose <span class="math inline">\(x\)</span> as:</p>
+<p><span class="math display" id="eq:medeffeq">\[\begin{equation}
+  x = m\left(\frac{f_a}{f_u}\right)^{1/\lambda} = m\left(\frac{y-E_{min}}{E_{max}-y}\right)^{1/\lambda}
+  \tag{2}
+\end{equation}\]</span></p>
 
+</div>
+<div class="footnotes">
+<hr />
+<ol start="3">
+<li id="fn3"><p>Experiments, experiments… I have seen dose-response curves that have <em>outliers</em>: so while the curve was monotonously descreasing, you have one point that creates a little step hill before ultimately going down!<a href="dose-response-curves-single-drug.html#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>This equation fits to the expectation of the mass-action law principle that dictates many biological processes such as cell growth or ligand-binding interactions – it’s the unified theory for the <em>Michaelis-Menten</em> equation, <em>Hill’s</em> equation, <em>Henderson-Hasselbalch</em> equation and <em>Scatchard</em> equation <span class="citation">(Chou <a href="references.html#ref-Chou2006">2006</a>)</span><a href="dose-response-curves-single-drug.html#fnref4" class="footnote-back">↩</a></p></li>
+</ol>
 </div>
             </section>
 

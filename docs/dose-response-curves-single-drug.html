@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="drugs-and-effects-terminology.html"/>
-<link rel="next" href="r-session-info.html"/>
+<link rel="next" href="drug-combinations-and-dose-response-matrices.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -133,6 +133,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Intro</a></li>
 <li class="chapter" data-level="" data-path="drugs-and-effects-terminology.html"><a href="drugs-and-effects-terminology.html"><i class="fa fa-check"></i>Drugs and Effects: Terminology</a></li>
 <li class="chapter" data-level="" data-path="dose-response-curves-single-drug.html"><a href="dose-response-curves-single-drug.html"><i class="fa fa-check"></i>Dose-response curves (single drug)</a></li>
+<li class="chapter" data-level="" data-path="drug-combinations-and-dose-response-matrices.html"><a href="drug-combinations-and-dose-response-matrices.html"><i class="fa fa-check"></i>Drug Combinations and Dose-Response Matrices</a></li>
+<li class="chapter" data-level="" data-path="nullRefModels.html"><a href="nullRefModels.html"><i class="fa fa-check"></i>Null reference models</a><ul>
+<li class="chapter" data-level="" data-path="nullRefModels.html"><a href="nullRefModels.html#efbm"><i class="fa fa-check"></i>Effect-based Models</a><ul>
+<li class="chapter" data-level="" data-path="nullRefModels.html"><a href="nullRefModels.html#CI"><i class="fa fa-check"></i>Combination Index (CI)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="nullRefModels.html"><a href="nullRefModels.html#defm"><i class="fa fa-check"></i>Dose-Effect based Models</a><ul>
+<li class="chapter" data-level="" data-path="nullRefModels.html"><a href="nullRefModels.html#loewe-additivity"><i class="fa fa-check"></i>Loewe Additivity</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="r-session-info.html"><a href="r-session-info.html"><i class="fa fa-check"></i>R Session Info</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -180,7 +189,7 @@ The goal when plotting this function is to find a way to measure the <span class
   \tag{3}
 \end{equation}\]</span></p>
 <p>Where we can easily compute the <span class="math inline">\(m,\lambda\)</span> parameters (one is the <em>slope</em>, the other can be found where the plot cuts the <span class="math inline">\(x\)</span>-axis: <span class="math inline">\(y=log\left(\frac{f_a}{1-f_a}\right)=0\)</span>).
-Using <a href="dose-response-curves-single-drug.html#eq:4pmll">(1)</a> while setting <span class="math inline">\(E_{max}=1,E_{min}=0\)</span> and as <span class="math inline">\(x\)</span> the <span class="math inline">\(x/m\)</span>, we can see how the sigmoidicity parameter <span class="math inline">\(\lambda\)</span> affects the shape of the curve:</p>
+Using Equation <a href="dose-response-curves-single-drug.html#eq:4pmll">(1)</a> and setting <span class="math inline">\(E_{max}=1,E_{min}=0\)</span> and as <span class="math inline">\(x\)</span> the <span class="math inline">\(x/m\)</span>, we can see how the sigmoidicity parameter <span class="math inline">\(\lambda\)</span> affects the shape of the curve:</p>
 <div class="figure" style="text-align: center"><span id="fig:HillsPlot"></span>
 <img src="index_files/figure-html/HillsPlot-1.png" alt="Hill's equation for different values of the slope parameter λ" width="576" />
 <p class="caption">
@@ -189,11 +198,10 @@ Figure 1: Hill’s equation for different values of the slope parameter λ
 </div>
 <p>Note that for <span class="math inline">\(\lambda=1\)</span> the shape is a <em>hyperbole</em>.</p>
 <p>Also, using equation <a href="dose-response-curves-single-drug.html#eq:medeffeq">(2)</a>, we can compute any dose <span class="math inline">\(x\)</span> as:</p>
-<p><span class="math display" id="eq:medeffeq">\[\begin{equation}
+<p><span class="math display" id="eq:medeffeq2">\[\begin{equation}
   x = m\left(\frac{f_a}{f_u}\right)^{1/\lambda} = m\left(\frac{y-E_{min}}{E_{max}-y}\right)^{1/\lambda}
-  \tag{2}
+  \tag{4}
 \end{equation}\]</span></p>
-
 </div>
 <div class="footnotes">
 <hr />
@@ -208,7 +216,7 @@ Figure 1: Hill’s equation for different values of the slope parameter λ
         </div>
       </div>
 <a href="drugs-and-effects-terminology.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="r-session-info.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="drug-combinations-and-dose-response-matrices.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Drugs and Effects: Terminology | Synergy Notes</title>
+  <title>Null reference models | Synergy Notes</title>
   <meta name="description" content="Description" />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Drugs and Effects: Terminology | Synergy Notes" />
+  <meta property="og:title" content="Null reference models | Synergy Notes" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://bblodfon.github.io/synergy-doc/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="bblodfon/synergy-doc" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Drugs and Effects: Terminology | Synergy Notes" />
+  <meta name="twitter:title" content="Null reference models | Synergy Notes" />
   
   <meta name="twitter:description" content="Description" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="dose-response-curves-single-drug.html"/>
+<link rel="prev" href="drug-combinations-and-dose-response-matrices.html"/>
+<link rel="next" href="r-session-info.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -164,21 +164,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="drugs-and-effects-terminology" class="section level1 unnumbered">
-<h1>Drugs and Effects: Terminology</h1>
-<p>When a drug is administered in a biological system, we expect a measured output or effect which depends on the drug’s dosage.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>
-Usually, when we test drugs on cell lines, the measured output is the <em>viability</em> (response) of the cells, i.e. the percentage of the cells that survived. Generally, the following definitions can be used interchangeably:</p>
-<ol style="list-style-type: decimal">
-<li><em>%Affected</em> <span class="math inline">\(f_a\)</span>, drug effect <span class="math inline">\(E\)</span>, <em>%death</em> or <em>%inhibition</em>. Note that this definition closely relates to the drug effectiveness itself – how effective was the drug?</li>
-<li><em>%Unaffected</em> <span class="math inline">\(f_u\)</span>, <em>viability</em>, <em>cell growth</em>, <em>survival</em>, <em>globaloutput</em> <span class="math inline">\(gl\)</span> (used in the DrugLogics pipeline<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>). Note that this definition relates to the <em>output on the system that the drug is used</em>: e.g. how much were the cells affected by the drug?</li>
-</ol>
-<p>Note that the two definitions are complementary: <span class="math inline">\(f_a+f_u \Rightarrow E+gl=1\)</span>.</p>
+<div id="nullRefModels" class="section level1 unnumbered">
+<h1>Null reference models</h1>
+<p>Drugs produce effects.
+When drugs are used together (referred to as a <em>drug combination</em>) they can have greater or lesser effects (<strong>synergy</strong> or <strong>antagonism</strong>) than when used alone.
+To distinguish and categorize the combination effect we <em>compare</em> it to the effect that the drugs would have if they were used and <strong>no interaction</strong> was seen between them (also called the <em>additive effect</em>).
+A mathematical model that describes the <em>non-interaction</em> between two drugs is called a <strong>null reference model</strong> <span class="citation">(Lederer, Dijkstra, and Heskes <a href="references.html#ref-Lederer2018">2018</a>)</span>.
+Every null-reference model defines an effect threshold, for which if we observe a <strong>greater combination effect</strong> we would call the interaction a synergy (an antagonism otherwise). Of course, the distinction does not need to be binary, e.g. the larger the combination effect is from the the additive threshold, the more synergistic the drug combination is (and vise-versa for the antagonism case).</p>
+<p>There are <strong>two kinds of null reference models</strong>: the ones that are <em>effect-based</em> and the ones that are <em>dose-effect</em> based.
+The distinction is derived from what is used to define the specific thresholds that characterize a synergy effect: just the <strong>effects</strong> of the combined drugs or also information on their dosages (dose-response curves)? The most common null-reference models in each category are:</p>
+<ul>
+<li>Effect based
+<ul>
+<li>HSA (Highest Single Agent)<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></li>
+<li>Bliss Independence (Bliss)</li>
+<li>Response additivity</li>
+</ul></li>
+<li>Dose-effect based
+<ul>
+<li>Loewe Additivity (Loewe)</li>
+<li>ZIP Model</li>
+<li>Explicit Mean Equation Model</li>
+<li>Others</li>
+</ul></li>
+</ul>
+<div id="efbm" class="section level2 unnumbered">
+<h2>Effect-based Models</h2>
+<div id="CI" class="section level3 unnumbered">
+<h3>Combination Index (CI)</h3>
+</div>
+</div>
+<div id="defm" class="section level2 unnumbered">
+<h2>Dose-Effect based Models</h2>
+<div id="loewe-additivity" class="section level3 unnumbered">
+<h3>Loewe Additivity</h3>
+
+</div>
+</div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>In this text, <em>dosage</em> and <em>dose</em> are equivalent terms and are used to describe the quantity of the administered drug used<a href="drugs-and-effects-terminology.html#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>reference here at some point!<a href="drugs-and-effects-terminology.html#fnref2" class="footnote-back">↩</a></p></li>
+<ol start="7">
+<li id="fn7"><p>Also known as Gaddum’s non-interaction model<a href="nullRefModels.html#fnref7" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>
@@ -186,8 +213,8 @@ Usually, when we test drugs on cell lines, the measured output is the <em>viabil
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="dose-response-curves-single-drug.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="drug-combinations-and-dose-response-matrices.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-session-info.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

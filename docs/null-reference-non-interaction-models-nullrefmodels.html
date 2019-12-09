@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Drugs and Effects: Terminology | Synergy Notes</title>
+  <title>1 Null reference (non-interaction) models {nullRefModels} | Synergy Notes</title>
   <meta name="description" content="Description" />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Drugs and Effects: Terminology | Synergy Notes" />
+  <meta property="og:title" content="1 Null reference (non-interaction) models {nullRefModels} | Synergy Notes" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://bblodfon.github.io/synergy-doc/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="bblodfon/synergy-doc" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Drugs and Effects: Terminology | Synergy Notes" />
+  <meta name="twitter:title" content="1 Null reference (non-interaction) models {nullRefModels} | Synergy Notes" />
   
   <meta name="twitter:description" content="Description" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="dose-response-curves-single-drug.html"/>
+<link rel="prev" href="drug-combinations-and-dose-response-matrices.html"/>
+<link rel="next" href="r-session-info.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -134,14 +134,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="drugs-and-effects-terminology.html"><a href="drugs-and-effects-terminology.html"><i class="fa fa-check"></i>Drugs and Effects: Terminology</a></li>
 <li class="chapter" data-level="" data-path="dose-response-curves-single-drug.html"><a href="dose-response-curves-single-drug.html"><i class="fa fa-check"></i>Dose-response curves (single drug)</a></li>
 <li class="chapter" data-level="" data-path="drug-combinations-and-dose-response-matrices.html"><a href="drug-combinations-and-dose-response-matrices.html"><i class="fa fa-check"></i>Drug Combinations and Dose-Response Matrices</a></li>
-<li class="chapter" data-level="" data-path="nullRefModels.html"><a href="nullRefModels.html"><i class="fa fa-check"></i>Null reference models</a><ul>
-<li class="chapter" data-level="" data-path="nullRefModels.html"><a href="nullRefModels.html#efbm"><i class="fa fa-check"></i>Effect-based Models</a><ul>
-<li class="chapter" data-level="" data-path="nullRefModels.html"><a href="nullRefModels.html#CI"><i class="fa fa-check"></i>Combination Index (CI)</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="nullRefModels.html"><a href="nullRefModels.html#defm"><i class="fa fa-check"></i>Dose-Effect based Models</a><ul>
-<li class="chapter" data-level="" data-path="nullRefModels.html"><a href="nullRefModels.html#loewe-additivity"><i class="fa fa-check"></i>Loewe Additivity</a></li>
-</ul></li>
-</ul></li>
+<li class="chapter" data-level="1" data-path="null-reference-non-interaction-models-nullrefmodels.html"><a href="null-reference-non-interaction-models-nullrefmodels.html"><i class="fa fa-check"></i><b>1</b> Null reference (non-interaction) models {nullRefModels}</a></li>
 <li class="chapter" data-level="" data-path="r-session-info.html"><a href="r-session-info.html"><i class="fa fa-check"></i>R Session Info</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -164,30 +157,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="drugs-and-effects-terminology" class="section level1 unnumbered">
-<h1>Drugs and Effects: Terminology</h1>
-<p>When a drug is administered in a biological system, we expect a measured output or effect which depends on the drug’s dosage.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>
-Usually, when we test drugs on cell lines, the measured output is the <em>viability</em> (response) of the cells, i.e. the percentage of the cells that survived. Generally, the following definitions can be used interchangeably:</p>
-<ol style="list-style-type: decimal">
-<li><em>%Affected</em> <span class="math inline">\(f_a\)</span>, drug effect <span class="math inline">\(E\)</span>, <em>%death</em> or <em>%inhibition</em>. Note that this definition closely relates to the drug effectiveness itself – how effective was the drug?</li>
-<li><em>%Unaffected</em> <span class="math inline">\(f_u\)</span>, <em>viability</em>, <em>cell growth</em>, <em>survival</em>, <em>globaloutput</em> <span class="math inline">\(gl\)</span> (used in the DrugLogics pipeline<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>). Note that this definition relates to the <em>output on the system that the drug is used</em>: e.g. how much were the cells affected by the drug?</li>
-</ol>
-<p>Note that the two definitions are complementary: <span class="math inline">\(f_a+f_u \Rightarrow E+gl=1\)</span>.</p>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="1">
-<li id="fn1"><p>In this text, <em>dosage</em> and <em>dose</em> are equivalent terms and are used to describe the quantity of the administered drug used<a href="drugs-and-effects-terminology.html#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>reference here at some point!<a href="drugs-and-effects-terminology.html#fnref2" class="footnote-back">↩</a></p></li>
-</ol>
+<div id="null-reference-non-interaction-models-nullrefmodels" class="section level1">
+<h1><span class="header-section-number">1</span> Null reference (non-interaction) models {nullRefModels}</h1>
+<p>mouni</p>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="dose-response-curves-single-drug.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="drug-combinations-and-dose-response-matrices.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-session-info.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

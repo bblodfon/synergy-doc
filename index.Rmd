@@ -137,11 +137,11 @@ The distinction is derived from what is used to define the specific thresholds t
   - Explicit Mean Equation Model
   - Others
   
-## Effect-based Models {-#efbm}
+## Effect-based Models {-}
 
-### Combination Index (CI) {-#CI}
+### Combination Index (CI) {-}
 
-## Dose-Effect based Models {-#defm}
+## Dose-Effect based Models {-}
 
 ### Loewe Additivity {-}
 

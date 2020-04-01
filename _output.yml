@@ -1,18 +1,19 @@
 bookdown::gitbook:
-  #dev: svglite # in case I need svg images
   split_bib: false
+  split_by: section
   toc_depth: 4
   css: style.css
   config:
     toc:
-      collapse: section
+      collapse: subsection
       before: |
-        <li><a href="./">Synergy Notes</a></li>
+        <li><a href="./">Synergy Book</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    download: no
     sharing:
       github: yes
       twitter: no
       facebook: no
       all: no
+    view: https://github.com/bblodfon/synergy-doc/blob/master/%s
+    edit: https://github.com/bblodfon/synergy-doc/edit/master/%s

@@ -26,7 +26,7 @@ Later I thought of making this as a bookdown [@R-bookdown] document since it wou
 **This is not a review paper in a different format than usual, just personal notes.**
 I have copied statements used in the papers exactly as they were written (so full plagiarism). They wrote it, they said it, it is what it is. I repeat: these are just **NOTES**. If this doc helps you, good, if it does not, don't read it.
 
-</br>
+<br>
 And remember, as one of my supervisors once said:
 
 > What is a mountain, what is a synergy?
@@ -114,9 +114,9 @@ Another method plots the combination response vs the combined dosages of the two
 
 Most methodologies use a (mathematical) model that describes/calculates a response/effect threshold, which distinguishes synergy from non-synergy.
 Thus, comparing each observed response with that threshold, we get a different synergy score value for each element of the dose-response matrix and then we can average these values (or use another method ^[Huge story here, should you take the average of the matrix, the average of a specific sub-matrix, the minimum, the median, a value that optimizes an expression, etc. I have seen most of these methods around papers. If you are looking for some examples, take a look at the *ExcessHSA*, *beta* ($\beta$), *gamma* ($\gamma$) and summary delta ($\Delta$) scores at the SI of [@MathewsGriner2014] and [@Yadav2015]]) to get **a single value for the whole dose-response matrix** – a *summary interaction score* that tells us if the combination was synergistic or not in the end. 
-The models that describe how to define those thresholds (for each combination data point in the dose-response matrix for example) are discussed in the [next section](#nullRefModels).
+The models that describe how to define those thresholds (for each combination data point in the dose-response matrix for example) are discussed in the [next section](#null-reference-models).
 
-# Null reference models {-#nullRefModels}
+# Null reference models {-}
 
 Drugs produce effects. 
 When drugs are used together (referred to as a *drug combination*) they can have greater or lesser effects (**synergy** or **antagonism**) than when used alone. 

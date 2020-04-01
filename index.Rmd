@@ -1,8 +1,8 @@
 ---
-title: "Synergy Notes"
+title: "On Synergy"
 author: "John Zobolas"
 date: "Last updated: `r format(Sys.time(), '%d %B, %Y')`"
-description: "Description"
+description: "A book about synergy models"
 url: 'https\://bblodfon.github.io/synergy-doc/'
 github-repo: "bblodfon/synergy-doc"
 bibliography: ["references.bib", "packages.bib"]

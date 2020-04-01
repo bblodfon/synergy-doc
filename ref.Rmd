@@ -1,7 +1,3 @@
-# R Session Info {-}
-
-```{r session info, comment=""}
-xfun::session_info()
-```
-
+`r if (knitr:::is_html_output()) '
 # References {-}
+'`

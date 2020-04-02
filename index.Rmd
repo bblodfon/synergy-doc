@@ -44,9 +44,9 @@ And remember, as one of my supervisors once said:
 
 TODO
 
-## Rsession-info {-}
+## Software Information {-}
 
-The most important thing is to install bookdown [@R-bookdown]. 
+The most important thing is to install is the bookdown package [@R-bookdown]. 
 
 ```{r session-info}
 xfun::session_info()

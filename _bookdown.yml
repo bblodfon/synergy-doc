@@ -1,5 +1,8 @@
 book_filename: "synergy_doc"
 output_dir: "docs"
-rmd_files: ["index.Rmd", "ref.Rmd"]
 new_session: true
 delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "
+

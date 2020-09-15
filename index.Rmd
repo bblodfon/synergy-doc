@@ -17,20 +17,29 @@ knitr::write_bib(c(.packages(), 'bookdown'), 'packages.bib')
 
 # Preface {-}
 
-Hi, there!
-You might wonder why this notes/book?
+## Updates {-}
 
-In the beginning I made these notes because I found the need to clarify some things in my head regarding the mathematical models that are used in the world of drug combinations and their synergistic effects and how these models have been used to computationally assess synergy, antagonism or non-interaction between drugs that are tested in high-throughput screens. 
-So, I read a *few papers* ^[Ok, maybe a lot of them!] and made a Word document with my notes.
-Later I thought of making this as a bookdown [@R-bookdown] document since it would be nicier to have it in that format for online reading and surely much more *accessible* to the scientific community - and here we are.
+- **September 2020**: Almost a year with no writing and for a good reason! I won't be doing anything related to synergy in my PhD, expect from [this analysis](https://druglogics.github.io/sintef-obs-synergies/).
+This means this is going to be left as it is for now, the full notes are still available in the [Word doc](https://github.com/bblodfon/synergy-doc/blob/master/notes_synergy.docx) if you wanna check them out.
+Sorry :(
+- **Summer 2020**: Read an amazing review article about synergy models [@Meyer2020], not so much from the mathematical perspective, but much more broad and interesting!
+It introduced to several other mathematical formulas which I wasn't aware of when I wrote the notes, so more reading, more writing!
+- **November 2019**: I thought of making this as a bookdown [@R-bookdown] document since it would be nicer to have it in that format for online reading, boost it's *accessibility* to the scientific community and add a means to collaborate (via Travis + bookdown's Edit button).
+It's gonna take some time to write it down though from the [Word document](https://github.com/bblodfon/synergy-doc/blob/master/notes_synergy.docx)
+- **Summer 2018**: I read a bunch of papers related to synergy quantification and models that describe it and wrote a [Word document](https://github.com/bblodfon/synergy-doc/blob/master/notes_synergy.docx) with my notes. 
+My motivation is to understand the mathematics behind the different models that are used to computationally assess synergy, antagonism or non-interaction between drugs that are tested in high-throughput screens, and compare/assess their weak and strong points.
 
-Before you read further, let me assure you of this fact: **this is not a review paper or a book for the subject at hand**, more like nicely structured notes, and personal for that matter.
+## What is this about? {-}
 
-I have copied statements used in the papers exactly as they were written (so full plagiarism). 
-They wrote it, they said it, it is what it is. 
-I repeat: these are just **NOTES**. 
+A collection of **notes** regarding mathematical models that describe synergy.
+Like a math textbook so to speak.
+So, **not a review paper** or a book for that matter, just nicely structured, incomplete, personal notes.
+
+Note that I have copied statements used in the papers exactly as they were written (so full plagiarism). 
+They wrote it, they said it, it is what it is!
+
 If these notes help you, then amazing!
-If you want to contribute, you are most welcome!
+If you want to contribute, you are most welcome! (use the edit button in the toolbar)
 
 And remember, as one of my supervisors once said:
 

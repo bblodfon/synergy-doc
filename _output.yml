@@ -7,7 +7,7 @@ bookdown::gitbook:
     toc:
       collapse: subsection
       before: |
-        <li><a href="./">Synergy Book</a></li>
+        <li><a href="./">Chapters</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     sharing:
@@ -15,5 +15,5 @@ bookdown::gitbook:
       twitter: no
       facebook: no
       all: no
-    view: https://github.com/bblodfon/synergy-doc/blob/master/%s
-    edit: https://github.com/bblodfon/synergy-doc/edit/master/%s
+    view: https://github.com/bblodfon/synergy-doc/blob/main/%s
+    #edit: https://github.com/bblodfon/synergy-doc/edit/main/%s

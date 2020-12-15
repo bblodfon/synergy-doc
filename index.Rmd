@@ -20,13 +20,13 @@ knitr::write_bib(c(.packages(), 'bookdown'), 'packages.bib')
 ## Updates {-}
 
 - **September 2020**: Almost a year with no writing and for a good reason! I won't be doing anything related to synergy in my PhD, expect from [this analysis](https://druglogics.github.io/sintef-obs-synergies/).
-This means this is going to be left as it is for now, the full notes are still available in the [Word doc](https://github.com/bblodfon/synergy-doc/blob/master/notes_synergy.docx) if you wanna check them out.
+This means this is going to be left as it is for now, the full notes are still available in the [Word doc](https://github.com/bblodfon/synergy-doc/blob/main/notes_synergy.docx) if you wanna check them out.
 Sorry :(
 - **Summer 2020**: Read an amazing review article about synergy models [@Meyer2020], not so much from the mathematical perspective, but much more broad and interesting!
 It introduced to several other mathematical formulas which I wasn't aware of when I wrote the notes, so more reading, more writing!
 - **November 2019**: I thought of making this as a bookdown [@R-bookdown] document since it would be nicer to have it in that format for online reading, boost it's *accessibility* to the scientific community and add a means to collaborate (via Travis + bookdown's Edit button).
-It's gonna take some time to write it down though from the [Word document](https://github.com/bblodfon/synergy-doc/blob/master/notes_synergy.docx)
-- **Summer 2018**: I read a bunch of papers related to synergy quantification and models that describe it and wrote a [Word document](https://github.com/bblodfon/synergy-doc/blob/master/notes_synergy.docx) with my notes. 
+It's gonna take some time to write it down though from the [Word document](https://github.com/bblodfon/synergy-doc/blob/main/notes_synergy.docx)
+- **Summer 2018**: I read a bunch of papers related to synergy quantification and models that describe it and wrote a [Word document](https://github.com/bblodfon/synergy-doc/blob/main/notes_synergy.docx) with my notes.
 My motivation is to understand the mathematics behind the different models that are used to computationally assess synergy, antagonism or non-interaction between drugs that are tested in high-throughput screens, and compare/assess their weak and strong points.
 
 ## What is this about? {-}

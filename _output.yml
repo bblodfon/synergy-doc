@@ -17,3 +17,4 @@ bookdown::gitbook:
       all: no
     view: https://github.com/bblodfon/synergy-doc/blob/main/%s
     #edit: https://github.com/bblodfon/synergy-doc/edit/main/%s
+

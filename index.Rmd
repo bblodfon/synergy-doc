@@ -31,15 +31,15 @@ My motivation is to understand the mathematics behind the different models that 
 
 ## What is this about? {-}
 
-A collection of **notes** regarding mathematical models that describe synergy.
+A collection of **personal notes** regarding mathematical models that describe synergy.
 Like a math textbook so to speak.
 So, **not a review paper** or a book for that matter, just nicely structured, incomplete, personal notes.
 
-Note that I have copied statements used in the papers exactly as they were written (so full plagiarism). 
+Note that I have copied statements used in the papers exactly as they were written (so full plagiarism).
 They wrote it, they said it, it is what it is!
 
 If these notes help you, then amazing!
-If you want to contribute, you are most welcome! (use the edit button in the toolbar)
+If you want to contribute, you are most welcome, do a PR please!
 
 And remember, as one of my supervisors once said:
 

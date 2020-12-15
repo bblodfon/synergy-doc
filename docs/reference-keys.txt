@@ -1,0 +1,6 @@
+eq:4pmll
+eq:medeffeq
+eq:medeffplot
+fig:HillsPlot
+eq:medeffeq2
+introduction
